@@ -12,7 +12,6 @@ type Server struct {
 }
 
 func (server *Server) Accept() (*RRQresponse, error) {
-
 	written, addr, err := server.conn.ReadFrom(server.buffer)
 	if err != nil {
 		return nil, fmt.Errorf("Failed to read data from client: %v", err)
